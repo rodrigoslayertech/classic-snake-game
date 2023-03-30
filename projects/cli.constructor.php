@@ -1,18 +1,18 @@
 <?php
 namespace Bootgly\CLI;
 
-require __DIR__ . '/games/cli/snake/1/Screen.php';
-require __DIR__ . '/games/cli/snake/2/Food.php';
-require __DIR__ . '/games/cli/snake/3/Snake.php';
-require __DIR__ . '/games/cli/snake/4/Game.php';
+require __DIR__ . '/@bootgly/cli/games/snake/1/Screen.php';
+require __DIR__ . '/@bootgly/cli/games/snake/2/Food.php';
+require __DIR__ . '/@bootgly/cli/games/snake/3/Snake.php';
+require __DIR__ . '/@bootgly/cli/games/snake/4/Game.php';
 
 
 use Bootgly\CLI;
 
-use Bootgly\CLI\Games\Food;
-use Bootgly\CLI\Games\Game;
-use Bootgly\CLI\Games\Screen;
-use Bootgly\CLI\Games\Snake;
+use Bootgly\CLI\Games\Snake\Screen;
+use Bootgly\CLI\Games\Snake\Food;
+use Bootgly\CLI\Games\Snake\Snake;
+use Bootgly\CLI\Games\Snake\Game;
 
 
 $Input = CLI::$Terminal->Input;

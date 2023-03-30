@@ -79,11 +79,8 @@ _*.example.php
 /projects/*
 !/projects
 !/projects/bootgly.constructor.php
-!/projects/cli.constructor.php
-!/projects/sapi.constructor.php.example
-!/projects/sapi.http.constructor.php.example
-!/projects/web.constructor.php.example
 !/projects/@bootgly
+!/projects/games
 
 ## /public
 /public/*
