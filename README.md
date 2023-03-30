@@ -21,6 +21,12 @@
 
 ---
 
+## ▶️ Play
+
+To start the game, in the root folder type in your terminal:
+
+`php bootgly`
+
 ## 🖼 Screenshots
 ![Classic Snake Game](screenshot.png "Classic Snake Game - powered by Bootgly CLI")
 
