@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://github.com/bootgly/.github/raw/main/favicon-temp1-128.png" alt="bootgly-logo" width="120px" height="120px"/>
+  <img src="logo.png" alt="bootgly-logo" width="120px" height="120px"/>
 </p>
 <h1 align="center">Classic Snake Game</h1>
 <p align="center">
-  <i>Powered by Bootgly CLI (Bootgly PHP Framework).</i>
+  <i>Powered by Bootgly CLI (from <a href="https://packagist.org/packages/bootgly/bootgly-php-framework">Bootgly PHP Framework</a>).</i>
 </p>
 <p align="center">
   <a href="https://packagist.org/packages/bootgly/bootgly-php-framework">
@@ -29,19 +29,6 @@ To start the game, in the root folder type in your terminal:
 
 ## 🖼 Screenshots
 ![Classic Snake Game](screenshot.png "Classic Snake Game - powered by Bootgly CLI")
-
----
-
-### 💖 Sponsorship
-
-A lot of time and energy is devoted to this project. To accelerate your growth, if you like this project or depend on it for your stack to work, consider [sponsoring it][GITHUB_SPONSOR].
-
-Your sponsorship will keep this project always **up to date** with **new features** and **improvements** / **bug fixes**.
-
-### 🔗 Social networks
-- [Telegram][TELEGRAM]
-- [Reddit][REDDIT]
-- [Discord][DISCORD]
 
 ---
 
