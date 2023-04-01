@@ -1,0 +1,22 @@
+{
+   "name": "rodrigoslayertech/classic-snake-game",
+   "type": "project",
+   "description": "The Classic Snake Game made with Bootgly CLI (from Bootgly PHP Framework).",
+   "keywords": ["snake", "cli", "games", "bootgly", "php", "framework"],
+   "license": "MIT",
+   "authors": [
+      {
+         "name":"Rodrigo Vieira",
+         "email":"rodrigo@bootgly.com"
+      }
+   ],
+
+   "config": {
+      "vendor-dir": "./@/"
+   },
+
+   "require": {
+      "php": "^8.2",
+      "bootgly/bootgly-php-framework": "dev-main"
+   }
+}

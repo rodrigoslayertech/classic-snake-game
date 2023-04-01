@@ -13,19 +13,40 @@
 
 ---
 
-## ⚙️ Dependencies
+# 🚀 Deploy
 
-- PHP 8.2+ `[Required]`
-- Opcache with JIT enabled (+50% performance) `[Optional]`
-- Linux OS (Debian based OS is recommended: Debian, Ubuntu...) `[Required]`
+## 🤝 Compatibility
 
----
+Operation System | Terminal
+--- | ---
+✅ Linux (Debian based) | ✅ Windows Terminal (WSL2)
+❌ Windows | ✅ GNOME
+❔ Unix | ❔ Zsh, Fish, Konsole, Terminator
+
+✅ = Compatible
+❌ = Incompatible
+❔ = Untested
+
+## 📦 Dependencies
+
+- PHP 8.2+ ⚠️
+- Opcache with JIT enabled (+50% performance) 👍
+- Composer ⚠️
+
+⚠️ = Required
+👍 = Recommended
+
+## ⚙️ Install
+
+`composer install`
 
 ## ▶️ Play
 
 To start the game, in the root folder type in your terminal:
 
 `php bootgly`
+
+---
 
 ## 🖼 Screenshots
 ![Classic Snake Game](screenshot.png "Classic Snake Game - powered by Bootgly CLI")
@@ -38,15 +59,4 @@ The Bootgly PHP Framework is open-sourced software licensed under the [MIT licen
 
 
 <!-- Links -->
-[GITHUB_SPONSOR]: https://github.com/sponsors/bootgly
-
-[TELEGRAM]: https://t.me/bootgly/
-[REDDIT]: https://www.reddit.com/r/bootgly/
-[DISCORD]: https://discord.gg/SKRHsYmtyJ/
-
-
-[CODE_OF_CONDUCT]: CODE_OF_CONDUCT.md
-[SEMANTIC_VERSIONING]: https://semver.org/
-
-
 [MIT_LICENSE]: https://opensource.org/licenses/MIT

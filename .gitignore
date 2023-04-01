@@ -1,96 +1,18 @@
-### * Globals
 # Ignore IDEs folders...
 .idea/
+# Ignore files by extension...
+*.iso
 # Ignore locks, bin, envs...
 composer
 composer.lock
-cli-config.php
-server-*.php
-*.iso
-_*.example.php
+
 
 ### @Bootgly ###
-## Short folders
-# Ignore &xcluded folders
+
+## Global folders
+# Excluded
 **/&
 
-### Bootstrap ###
-
-## /@
-@/php.ini
-@/certificates/*
-# Ignore imported packages (equivalent to vendor)
-@/imports/*
-
-## /abstract
-/abstract/*
-!/abstract/..php
-
-!/abstract/@functions
-!/abstract/@interfaces
-!/abstract/@traits
-
-!/abstract/__array
-!/abstract/__class
-!/abstract/__iterable
-!/abstract/__string
-
-!/abstract/data
-
-!/abstract/dir
-!/abstract/file
-!/abstract/path
-
-!/abstract/socket
-
-## /base
-
-
-## /core
-/core/*
-!/core/@loader.php
-!/core/Bootgly.php
-!/core/Database.php
-!/core/Event.php
-!/core/Event
-!/core/Project.php
-!/core/Template.php
-!/core/Template
-
-### Resources ###
-
-## /interfaces
-
-## /modules
-
-## /nodes
-
-## /platforms
-/platforms/CLI/*
-/platforms/Web/*
-!/platforms/Web/API.php
-!/platforms/Web/App.php
-
-
-### Sources ###
-
-## /projects
-# Ignore projects except bootgly subdirectory
-/projects/*
-!/projects
-!/projects/bootgly.constructor.php
-!/projects/@bootgly
-!/projects/games
-
-## /public
-/public/*
-!/public
-!/public/example.com
-
-## /workspace
-# Ignore all files here
-/workspace/*.*
-# Ignore all folder here
-/workspace/*/*
-# Preserve existence of folders with .gitkeep here
-!/workspace/*/.gitkeep
+## Root folders
+# Boot
+@/*
