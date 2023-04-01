@@ -12,6 +12,12 @@
 </p>
 
 ---
+# 🤔 About
+This repository is part of [Bootgly Awesome][BOOTGLY_AWESOME].
+
+The purpose was to demonstrate the power of the Client-Server interface to CLI of the Bootgly CLI which is part of the [Bootgly PHP Framework][BOOTGLY_PHP_FRAMEWORK].
+
+No additional extensions (like ncurses) were used, only `stty` system commands.
 
 # 🚀 Deploy
 
@@ -59,4 +65,6 @@ The Bootgly PHP Framework is open-sourced software licensed under the [MIT licen
 
 
 <!-- Links -->
+[BOOTGLY_AWESOME]: https://github.com/bootgly/-awesome
+[BOOTGLY_PHP_FRAMEWORK]: https://github.com/bootgly/bootgly-php-framework
 [MIT_LICENSE]: https://opensource.org/licenses/MIT
