@@ -17,6 +17,6 @@
 
    "require": {
       "php": "^8.2",
-      "bootgly/bootgly-php-framework": "dev-main"
+      "bootgly/bootgly": "dev-main"
    }
 }
