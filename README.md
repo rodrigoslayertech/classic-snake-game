@@ -12,16 +12,16 @@
 </p>
 
 ---
-# 🤔 About
+## 🤔 About
 This repository is part of [Bootgly Awesome][BOOTGLY_AWESOME].
 
 The purpose was to demonstrate the power of the Client-Server interface to CLI of the Bootgly CLI which is part of the [Bootgly PHP Framework][BOOTGLY_PHP_FRAMEWORK].
 
 No additional extensions (like ncurses) were used, only `stty` system commands.
 
-# 🚀 Deploy
+## 🟢 Boot
 
-## 🤝 Compatibility
+### 🤝 Compatibility
 
 Operation System | Terminal
 --- | ---
@@ -33,7 +33,7 @@ Operation System | Terminal
 ❌ = Incompatible
 ❔ = Untested
 
-## 📦 Dependencies
+### 📦 Dependencies
 
 - PHP 8.2+ ⚠️
 - Opcache with JIT enabled (+50% performance) 👍
@@ -42,11 +42,15 @@ Operation System | Terminal
 ⚠️ = Required
 👍 = Recommended
 
-## ⚙️ Install
+---
+
+## 🚀 Deploy
+
+### ⚙️ Install
 
 `composer install`
 
-## ▶️ Play
+### ▶️ Play
 
 To start the game, in the root folder type in your terminal:
 
