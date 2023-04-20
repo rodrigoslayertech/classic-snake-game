@@ -104,7 +104,7 @@ $Input->reading(
 
             $Output->render(<<<OUTPUT
             /* @*:
-             * @#green: Classic Snake Game - v0.1.0 @;
+             * @#green: Classic Snake Game - v0.1.1 @;
              * @#yellow: @@ Powered by Bootgly CLI (from Bootgly PHP Framework) @;
              * by Rodrigo Vieira [rodrigo@bootly.com]
              * ---
