@@ -13,32 +13,32 @@ namespace Bootgly\CLI\Games\Snake;
 
 class Food
 {
-   public Screen $Screen;
+   public Display $Display;
 
    // * Data
    public string $food;
    // * Meta
-   // ! Screen
+   // ! Display
    // Position
    public int $x;
    public int $y;
 
 
-   public function __construct (Screen $Screen)
+   public function __construct (Display $Display)
    {
-      $this->Screen = $Screen;
+      $this->Display = $Display;
 
       // * Data
       $this->food = '*';
       // * Meta
-      // ! Screen
+      // ! Display
       // Position
-      $this->x = rand(1, $Screen->width - 2);
-      $this->y = rand(1, $Screen->height - 2);
+      $this->x = rand(1, $Display->width - 2);
+      $this->y = rand(1, $Display->height - 2);
    }
 
    public function draw ()
    {
-      $this->Screen->screen[$this->y][$this->x] = $this->food;
+      $this->Display->rows[$this->y][$this->x] = $this->food;
    }
 }

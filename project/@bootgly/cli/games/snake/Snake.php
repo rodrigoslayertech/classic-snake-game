@@ -13,7 +13,7 @@ namespace Bootgly\CLI\Games\Snake;
 
 class Snake
 {
-   public Screen $Screen;
+   public Display $Display;
    public Food $Food;
 
    // * Config
@@ -27,9 +27,9 @@ class Snake
    public array $snake;
 
 
-   public function __construct (Screen $Screen, Food $Food)
+   public function __construct (Display $Display, Food $Food)
    {
-      $this->Screen = $Screen;
+      $this->Display = $Display;
       $this->Food = $Food;
 
 
@@ -54,23 +54,24 @@ class Snake
 
    public function draw ()
    {
-      $screen = &$this->Screen->screen;
-
+      // - Display
+      $rows = &$this->Display->rows;
+      // @
       $snake = &$this->snake;
 
       // @ Draw the snake itself
       foreach ($snake as $index => $position) {
          if ($index === 0) {
-            $screen[$position[1]][$position[0]] = 'X';
+            $rows[$position[1]][$position[0]] = 'X';
          } else {
-            $screen[$position[1]][$position[0]] = 'O';
+            $rows[$position[1]][$position[0]] = 'O';
          }
       }
 
       // @ Clears the last position of the snake's tail
       $cloaca = end($snake);
 
-      $screen[$cloaca[1]][$cloaca[0]] = ' ';
+      $rows[$cloaca[1]][$cloaca[0]] = ' ';
    }
 
    public function direct (array $head, string $direction)
@@ -89,7 +90,7 @@ class Snake
    }
    public function move (string $direction) : bool
    {
-      $Screen = $this->Screen;
+      $Display = $this->Display;
       $Food = $this->Food;
 
       $snake = &$this->snake;
@@ -99,8 +100,8 @@ class Snake
 
       // @ Checks if the snake has collided with the walls or with its own body
       if (
-         $head[0] == 0 || $head[0] == $Screen->width - 1
-         || $head[1] == 0 || $head[1] == $Screen->height - 1
+         $head[0] == 0 || $head[0] == $Display->width - 1
+         || $head[1] == 0 || $head[1] == $Display->height - 1
          || in_array($head, $snake)
       ) {
          return false;
@@ -111,8 +112,8 @@ class Snake
 
       // @ Check if the snake has eaten the food
       if ($snake[0][0] == $Food->x && $snake[0][1] == $Food->y) {
-         $Food->x = rand(1, $Screen->width - 2);
-         $Food->y = rand(1, $Screen->height - 2);
+         $Food->x = rand(1, $Display->width - 2);
+         $Food->y = rand(1, $Display->height - 2);
       } else {
          array_pop($snake);
       }

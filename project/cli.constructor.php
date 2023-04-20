@@ -1,34 +1,29 @@
 <?php
 namespace Bootgly\CLI;
 
-require __DIR__ . '/@bootgly/cli/games/snake/1/Screen.php';
-require __DIR__ . '/@bootgly/cli/games/snake/2/Food.php';
-require __DIR__ . '/@bootgly/cli/games/snake/3/Snake.php';
-require __DIR__ . '/@bootgly/cli/games/snake/4/Game.php';
-
+require __DIR__ . '/@bootgly/cli/games/snake/Display.php';
+require __DIR__ . '/@bootgly/cli/games/snake/Food.php';
+require __DIR__ . '/@bootgly/cli/games/snake/Snake.php';
 
 use Bootgly\CLI;
 
-use Bootgly\CLI\Games\Snake\Screen;
+use Bootgly\CLI\Games\Snake\Display;
 use Bootgly\CLI\Games\Snake\Food;
 use Bootgly\CLI\Games\Snake\Snake;
-use Bootgly\CLI\Games\Snake\Game;
 
-
+// @ Bootgly
 $Input = CLI::$Terminal->Input;
 $Output = CLI::$Terminal->Output;
 
+// @ Game
+$Display = new Display($Output);
+$Food = new Food($Display);
+$Snake = new Snake($Display, $Food);
 
-$Screen = new Screen($Output);
-$Food = new Food($Screen);
-$Snake = new Snake($Screen, $Food);
-$Game = new Game($Screen);
-
-
+// @
 $Input->reading(
    // Terminal Client API
    CAPI: function ($read, $write) // Client Input { $read, $write }
-   use ($Output)
    {
       // * Config
       $delay = 100000;
@@ -87,20 +82,21 @@ $Input->reading(
    },
    // Terminal Server API
    SAPI: function ($reading) // Server Input { $reading }
-   use ($Output, $Screen, $Food, $Snake, $Game)
+   use ($Output, $Display, $Food, $Snake)
    {
       // * Config
       $timeout = 100000; // in microseconds (1 second = 1000000 microsecond)
 
-      // @ Init
+      // @ Bootgly CLI
       $Output->Cursor->hide();
 
-      $Game->start();
+      // @ Game
+      $Display->init();
 
       $continue = true;
       $direction = '➡️';
 
-      // @ Loop
+      // @
       while (true) {
          // @ Start game
          foreach ($reading(timeout: $timeout) as $data) {
@@ -109,11 +105,11 @@ $Input->reading(
             $Output->render(<<<OUTPUT
             /* @*:
              * @#green: Classic Snake Game - v0.1.0 @;
-             * @#yellow: @@ Powered by Bootgly CLI (Bootgly PHP Framework) @;
+             * @#yellow: @@ Powered by Bootgly CLI (from Bootgly PHP Framework) @;
              * by Rodrigo Vieira [rodrigo@bootly.com]
              * ---
              * @#cyan: Instructions: @;
-             * @#cyan: Use the keys ⬆️, ⬇️, ➡️, ⬅️ to control the direction of snake... @;
+             * @#cyan: Use the keys ⬆️, ⬇️, ➡️, ⬅️ to control the direction of snake. @;
              * @#cyan: Press and hold any control key above to speed up the snake. @;
              */\n
             OUTPUT);
@@ -133,18 +129,13 @@ $Input->reading(
                $Snake->draw();
                $Food->draw();
 
-               $Screen->render();
+               $Display->render();
 
                continue;
             }
 
             // Game over...
-            $Screen->render();
-
-            $Output->Cursor->moveTo(line: 20, column: 24);
-            $Output->writing('Game over...');
-            $Output->Cursor->down(lines: 11, column: 1); // @ Move Cursor to outside of screen game
-            $Output->Cursor->show(); // @ Reset Cursor visibility
+            $Display->end();
 
             break;
          }

@@ -2,6 +2,7 @@
 .idea/
 # Ignore files by extension...
 *.iso
+*.log
 # Ignore locks, bin, envs...
 composer
 composer.lock
