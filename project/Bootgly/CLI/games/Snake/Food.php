@@ -8,7 +8,7 @@
  * --------------------------------------------------------------------------
  */
 
-namespace Bootgly\CLI\Games\Snake;
+namespace project\Bootgly\CLI\games\Snake;
 
 
 class Food

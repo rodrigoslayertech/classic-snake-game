@@ -1,15 +1,11 @@
 <?php
 namespace Bootgly\CLI;
 
-require __DIR__ . '/@bootgly/cli/games/snake/Display.php';
-require __DIR__ . '/@bootgly/cli/games/snake/Food.php';
-require __DIR__ . '/@bootgly/cli/games/snake/Snake.php';
-
 use Bootgly\CLI;
 
-use Bootgly\CLI\Games\Snake\Display;
-use Bootgly\CLI\Games\Snake\Food;
-use Bootgly\CLI\Games\Snake\Snake;
+use project\Bootgly\CLI\games\Snake\Display;
+use project\Bootgly\CLI\games\Snake\Food;
+use project\Bootgly\CLI\games\Snake\Snake;
 
 // @ Bootgly
 $Input = CLI::$Terminal->Input;
