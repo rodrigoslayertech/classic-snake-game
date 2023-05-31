@@ -3,9 +3,9 @@ namespace Bootgly\CLI;
 
 use Bootgly\CLI;
 
-use project\Bootgly\CLI\games\Snake\Display;
-use project\Bootgly\CLI\games\Snake\Food;
-use project\Bootgly\CLI\games\Snake\Snake;
+use projects\Bootgly\CLI\games\Snake\Display;
+use projects\Bootgly\CLI\games\Snake\Food;
+use projects\Bootgly\CLI\games\Snake\Snake;
 
 // @ Bootgly
 $Input = CLI::$Terminal->Input;
