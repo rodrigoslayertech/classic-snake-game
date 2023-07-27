@@ -12,11 +12,11 @@
    ],
 
    "config": {
-      "vendor-dir": "./@/"
+      "vendor-dir": "./@imports/"
    },
 
    "require": {
       "php": "^8.2",
-      "bootgly/bootgly": "dev-main"
+      "bootgly/bootgly": "v0.0.9-alpha"
    }
 }

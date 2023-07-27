@@ -4,15 +4,16 @@
  * --------------------------------------------------------------------------
  * Bootgly PHP Framework
  * Developed by Rodrigo Vieira (@rodrigoslayertech)
- * Copyright 2020-present
+ * Copyright 2023-present
  * Licensed under MIT
  * --------------------------------------------------------------------------
  */
-
-namespace Bootgly;
 
 #error_reporting(E_ALL); ini_set('display_errors', 'On');
 
 #phpinfo(); exit;
 
-require_once '@/autoload.php';
+define('BOOTGLY_WORKING_BASE', __DIR__);
+define('BOOTGLY_WORKING_DIR', BOOTGLY_WORKING_BASE . DIRECTORY_SEPARATOR);
+
+(@include __DIR__ . '/@imports/autoload.php') || exit("Type `composer install` to install dependencies.\n");
