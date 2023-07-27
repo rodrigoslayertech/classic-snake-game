@@ -10,11 +10,13 @@
 
 namespace projects\Bootgly;
 
+
 use Bootgly\CLI;
 
 use projects\Bootgly\CLI\games\Snake\Display;
 use projects\Bootgly\CLI\games\Snake\Food;
 use projects\Bootgly\CLI\games\Snake\Snake;
+
 
 // @ Bootgly
 $Input = CLI::$Terminal->Input;
